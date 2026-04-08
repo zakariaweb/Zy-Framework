@@ -1,6 +1,6 @@
 {
   "name": "@zytechg/zyui",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ZyUI and ZyJS core UI system for ZyFOCUS.",
   "license": "MIT",
   "main": "zyjs.js",
