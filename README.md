@@ -1,5 +1,9 @@
 # Zy-Framework
 
+[![npm](https://img.shields.io/npm/v/@zytechg/zyui?label=npm)](https://www.npmjs.com/package/@zytechg/zyui)
+[![license](https://img.shields.io/npm/l/@zytechg/zyui)](LICENSE)
+[![ci](https://img.shields.io/github/actions/workflow/status/zakariaweb/Zy-Framework/release.yml?label=release)](https://github.com/zakariaweb/Zy-Framework/actions/workflows/release.yml)
+
 Zy-Framework is the home of **ZyUI** (CSS) and **ZyJS** (JS). It powers ZyFOCUS and is designed to scale to other products with a consistent, professional UI system.
 
 ## Structure
