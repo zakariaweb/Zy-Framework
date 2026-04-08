@@ -2,7 +2,7 @@
   "name": "@zytechg/zyui",
   "version": "0.1.0",
   "description": "ZyUI and ZyJS core UI system for ZyFOCUS.",
-  "license": "ISC",
+  "license": "MIT",
   "main": "zyjs.js",
   "style": "zy-ui.css",
   "files": [

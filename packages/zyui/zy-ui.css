@@ -190,6 +190,218 @@
     gap: var(--zyui-gap-md);
 }
 
+/* ===============================
+   ZyUI Bootstrap-like System
+   =============================== */
+.zyui-card-grid {
+    display: grid;
+    gap: var(--zyui-gap-lg);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.zyui-card {
+    display: grid;
+    gap: var(--zyui-gap-sm);
+}
+
+.zyui-card-header,
+.zyui-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--zyui-gap-sm);
+}
+
+.zyui-card-title {
+    font-weight: 700;
+}
+
+.zyui-card-subtitle {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.zyui-card-body {
+    display: grid;
+    gap: var(--zyui-gap-sm);
+}
+
+.zyui-card-muted {
+    background:
+        linear-gradient(135deg, rgb(255 255 255 / 6%), rgb(255 255 255 / 1%)),
+        color-mix(in srgb, var(--surface) 85%, transparent);
+    border-color: color-mix(in srgb, var(--glass-border) 70%, transparent);
+}
+
+.zyui-card-compact {
+    padding: 1rem;
+}
+
+.zyui-sidebar {
+    display: grid;
+    gap: var(--zyui-gap-md);
+    padding: 1.2rem;
+    border-radius: var(--zyui-radius-lg);
+    background: linear-gradient(180deg, rgb(8 14 26 / 92%), rgb(9 14 24 / 72%));
+    border: 1px solid rgb(148 163 184 / 16%);
+    min-width: 240px;
+}
+
+.zyui-sidebar-header {
+    display: grid;
+    gap: 0.3rem;
+}
+
+.zyui-sidebar-title {
+    font-weight: 700;
+}
+
+.zyui-sidebar-nav {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.zyui-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.75rem;
+    border-radius: 10px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.zyui-sidebar-item:hover,
+.zyui-sidebar-item:focus-visible {
+    background: rgb(15 23 42 / 55%);
+    border-color: rgb(148 163 184 / 18%);
+    color: var(--text-primary);
+}
+
+.zyui-sidebar-item.is-active {
+    background: rgb(37 99 235 / 25%);
+    border-color: rgb(59 130 246 / 35%);
+    color: #fff;
+}
+
+.zyui-bottom-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+    gap: 0.35rem;
+    padding: 0.45rem 0.8rem calc(0.45rem + env(safe-area-inset-bottom));
+    border-radius: 18px;
+    background: linear-gradient(120deg, rgb(10 18 30 / 96%), rgb(6 12 22 / 92%));
+    border: 1px solid rgb(148 163 184 / 18%);
+    box-shadow: 0 16px 36px rgb(0 0 0 / 35%);
+}
+
+.zyui-bottom-nav.is-fixed {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.25rem;
+    width: min(720px, calc(100% - 2rem));
+    z-index: 40;
+}
+
+.zyui-bottom-nav-item {
+    display: grid;
+    gap: 0.3rem;
+    justify-items: center;
+    padding: 0.45rem 0.35rem;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--text-tertiary);
+    font-size: 0.75rem;
+    letter-spacing: 0.02em;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.zyui-bottom-nav-item:hover,
+.zyui-bottom-nav-item:focus-visible {
+    background: rgb(15 23 42 / 60%);
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.zyui-bottom-nav-item.is-active {
+    background: rgb(37 99 235 / 30%);
+    color: #fff;
+}
+
+.zyui-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: rgb(15 23 42 / 60%);
+    border: 1px solid rgb(148 163 184 / 20%);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.zyui-icon.is-sm {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+
+.zyui-icon.is-lg {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+}
+
+.zyui-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 12px;
+    border: 1px solid rgb(148 163 184 / 20%);
+    background: rgb(15 23 42 / 50%);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.zyui-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: rgb(15 23 42 / 70%);
+    border: 1px solid rgb(148 163 184 / 25%);
+    color: var(--text-secondary);
+}
+
+.zyui-badge.is-success {
+    background: rgb(16 185 129 / 20%);
+    border-color: rgb(16 185 129 / 40%);
+    color: #b6fcd5;
+}
+
+.zyui-badge.is-warning {
+    background: rgb(245 158 11 / 18%);
+    border-color: rgb(245 158 11 / 40%);
+    color: #ffd39a;
+}
+
+.zyui-badge.is-danger {
+    background: rgb(239 68 68 / 18%);
+    border-color: rgb(239 68 68 / 40%);
+    color: #ffb7b7;
+}
+
 @media (width <= 1080px) {
     .zyui-layout {
         grid-template-columns: 1fr;

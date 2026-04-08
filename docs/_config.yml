@@ -1,3 +1,5 @@
 title: Zy-Framework
+description: ZyUI + ZyJS documentation hub
 theme: minima
 markdown: kramdown
+show_downloads: false
