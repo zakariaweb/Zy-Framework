@@ -1,0 +1,204 @@
+/* ZY UI Base (Extracted) */
+
+/* ===============================
+   ZyUI Tokens (Additive)
+   =============================== */
+:root {
+    --zyui-radius-sm: 10px;
+    --zyui-radius-md: 14px;
+    --zyui-radius-lg: 18px;
+    --zyui-radius-xl: 22px;
+    --zyui-gap-sm: 0.5rem;
+    --zyui-gap-md: 0.9rem;
+    --zyui-gap-lg: 1.2rem;
+    --zyui-shadow-soft: 0 12px 30px rgb(0 0 0 / 20%);
+    --zyui-shadow-elevated: 0 20px 48px rgb(0 0 0 / 35%);
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--grid-gap);
+    margin-bottom: var(--grid-gap);
+}
+
+.card-grid > *,
+.stats-grid > *,
+.actions-grid > * {
+    min-width: 0;
+}
+
+/* Glass Card Base */
+.glass-card {
+    background:
+        linear-gradient(135deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 1.5%)),
+        var(--glass-bg);
+    backdrop-filter: blur(28px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
+    padding: var(--card-pad);
+    box-shadow: var(--glass-shadow);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--grid-gap);
+    margin-bottom: var(--grid-gap);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 14px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    box-shadow: 0 12px 26px color-mix(in srgb, var(--primary) 36%, transparent);
+}
+
+.btn-primary:hover {
+    filter: brightness(1.05);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: color-mix(in srgb, var(--surface) 72%, transparent);
+    color: var(--text-primary);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: color-mix(in srgb, var(--surface) 82%, transparent);
+    border-color: color-mix(in srgb, var(--primary) 22%, var(--glass-border));
+}
+
+/* ===============================
+   ZyUI Namespaced Components
+   =============================== */
+.zyui-card {
+    background:
+        linear-gradient(135deg, rgb(255 255 255 / 7%), rgb(255 255 255 / 1.5%)),
+        var(--glass-bg);
+    backdrop-filter: blur(28px) saturate(140%);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--zyui-radius-lg);
+    padding: var(--card-pad);
+    box-shadow: var(--glass-shadow);
+}
+
+.zyui-toolbar {
+    display: grid;
+    gap: var(--zyui-gap-md);
+    padding: 1rem 1.2rem;
+    border-radius: var(--zyui-radius-lg);
+    background: linear-gradient(135deg, rgb(10 16 28 / 88%), rgb(14 22 38 / 80%));
+    border: 1px solid rgb(148 163 184 / 14%);
+}
+
+.zyui-section {
+    position: relative;
+}
+
+.zyui-section-header {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.zyui-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--zyui-gap-sm);
+    padding: 0.6rem 0.75rem;
+    border-radius: 999px;
+    background: linear-gradient(120deg, rgb(12 18 32 / 85%), rgb(10 16 28 / 70%));
+    border: 1px solid rgb(148 163 184 / 16%);
+    align-items: center;
+}
+
+.zyui-pill {
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgb(15 23 42 / 70%);
+    border: 1px solid rgb(148 163 184 / 20%);
+}
+
+.zyui-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--zyui-gap-md);
+    padding: 1rem 1.2rem;
+    border-radius: var(--zyui-radius-lg);
+    background: linear-gradient(140deg, rgb(12 20 32 / 95%), rgb(10 16 28 / 85%));
+    border: 1px solid rgb(59 130 246 / 35%);
+    box-shadow: var(--zyui-shadow-elevated);
+}
+
+.zyui-title {
+    font-weight: 700;
+}
+
+.zyui-subtitle {
+    color: var(--text-secondary);
+}
+
+.zyui-meta {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+}
+
+.zyui-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-tertiary);
+}
+
+.zyui-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+    gap: var(--zyui-gap-lg);
+}
+
+.zyui-side {
+    display: grid;
+    gap: var(--zyui-gap-md);
+}
+
+.zyui-main {
+    min-width: 0;
+}
+
+.zyui-grid {
+    display: grid;
+    gap: var(--zyui-gap-md);
+}
+
+@media (width <= 1080px) {
+    .zyui-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (width <= 720px) {
+    .zyui-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
